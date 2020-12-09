@@ -11,7 +11,7 @@ public class EncryptionTest {
 	public void simpleEncryption() {
 		String password = "halalu";
 		Md5Hash encode = new Md5Hash(password);
-		System.out.println("encode : " + encode.toString());
+		System.out.println("encode : " + encode.toString()); 
 	}
 
 	@Test

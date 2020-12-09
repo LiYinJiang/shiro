@@ -20,10 +20,11 @@ public class TestShiroIniFile {
 		// iniUserTest();
 		System.out.println("=============================================");
 		DAO d = new DAO();
-		d.createUser("saltUser", "heiheihei");
+		d.createUser("Gaki", "3354");
+		d.createUser("Tinker", "9527");
 		User user = new User();
-		user.setName("saltUser");
-		user.setPassword("heiheihei");
+		user.setName("Tinker");
+		user.setPassword("9527");
 		if (login(user)) {
 			System.out.printf("%s login ok, user password %s \t %n", user.getName(), user.getPassword());
 		} else {
@@ -32,12 +33,12 @@ public class TestShiroIniFile {
 	}
 
 	private static Subject getSubject() {
-		// 根据文件配置获取工厂类
+		// 根据文件配置获取工厂�?
 		Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
-		// 工厂类创建实例
+		// 工厂类创建实�?
 		SecurityManager sm = factory.getInstance();
 
-		// 将安全管理者放入全局对象
+		// 将安全管理�?�放入全�?对象
 		SecurityUtils.setSecurityManager(sm);
 
 		// 全局对象通过安全管理者获取subject对象
