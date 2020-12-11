@@ -14,7 +14,13 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 
-@WebServlet(name = "loginServlet", urlPatterns = "/login")
+/**
+ *  @WebServlet(name = "loginServlet", urlPatterns = "/login")
+ *  use test servlet 
+ *  
+ * @author Yinjiang.Li
+ * 
+ */
 public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name = req.getParameter("name");
