@@ -24,6 +24,7 @@
 		<property name="filters">
 			<util:map>
 				<entry key="logout" value-ref="logoutFilter" />
+				<entry key="url" value-ref="urlPathMacthingFilter"></entry>
 			</util:map>
 		</property>
 		<property name="filterChainDefinitions">
@@ -33,9 +34,9 @@
 				/index=anon
 				/static/**=anon
 				/doLogout=logout
-
+				/config/**=anon
 				<!--所有的请求(除去配置的静态资源请求或请求地址为anon的请求)都要通过登录验证,如果未登录则跳到/login -->
-				/** = authc
+				/** = url
 			</value>
 		</property>
 	</bean>
@@ -96,11 +97,17 @@
 		class="eryingzhang.net.realm.DatabaseRealm">
 		<property name="credentialsMatcher" ref="credentialsMatcher"></property>
 	</bean>
-	<bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+	<bean id="credentialsMatcher"
+		class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
 		<property name="hashAlgorithmName" value="md5"></property>
 		<property name="hashIterations" value="2"></property>
 		<property name="storedCredentialsHexEncoded" value="true"></property>
 	</bean>
 	<bean id="lifecycleBeanPostProcessor"
 		class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+	<bean id="urlPathMacthingFilter"
+		class="eryingzhang.net.filter.URLPathMatchingFilter">
+	</bean>
+
 </beans>

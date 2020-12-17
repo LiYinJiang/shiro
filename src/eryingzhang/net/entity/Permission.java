@@ -1,27 +1,43 @@
 package eryingzhang.net.entity;
 
 public class Permission {
-	private int id;
-	private String name;
+    private Long id;
 
-	public int getId() {
-		return id;
-	}
+    private String name;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    private String desc_;
 
-	public String getName() {
-		return name;
-	}
+    private String url;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	@Override
-	public String toString() {
-		return "Role [id=" + id + ", name=" + name + "]";
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public String getDesc() {
+        return desc_;
+    }
+
+    public void setDesc(String desc_) {
+        this.desc_ = desc_ == null ? null : desc_.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
+    }
 }

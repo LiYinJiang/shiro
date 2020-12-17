@@ -1,29 +1,33 @@
 package eryingzhang.net.entity;
 
 public class Role {
+    private Long id;
 
-	private int id;
-	private String name;
+    private String name;
 
-	public int getId() {
-		return id;
-	}
+    private String desc_;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	@Override
-	public String toString() {
-		return "Role [id=" + id + ", name=" + name + "]";
-	}
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
+    public String getDesc() {
+        return desc_;
+    }
+
+    public void setDesc(String desc_) {
+        this.desc_ = desc_ == null ? null : desc_.trim();
+    }
 }

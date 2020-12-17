@@ -1,46 +1,43 @@
 package eryingzhang.net.entity;
 
 public class User {
-	private int id;
-	private String name;
-	private String password;
-	private String salt;
+    private Long id;
 
-	public String getName() {
-		return name;
-	}
+    private String name;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String password;
 
-	public String getPassword() {
-		return password;
-	}
+    private String salt;
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getSalt() {
-		return salt;
-	}
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
-	public void setSalt(String salt) {
-		this.salt = salt;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + ", salt=" + salt + "]";
-	}
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
 
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt == null ? null : salt.trim();
+    }
 }

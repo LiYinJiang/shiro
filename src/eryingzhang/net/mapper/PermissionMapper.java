@@ -1,10 +1,21 @@
 package eryingzhang.net.mapper;
 
+import eryingzhang.net.entity.Permission;
+import eryingzhang.net.entity.PermissionExample;
 import java.util.List;
 
-import eryingzhang.net.entity.Permission;
-
 public interface PermissionMapper {
+    int deleteByPrimaryKey(Long id);
 
-	public List<Permission> listPermissionByUserName(String userName);
+    int insert(Permission record);
+
+    int insertSelective(Permission record);
+
+    List<Permission> selectByExample(PermissionExample example);
+
+    Permission selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(Permission record);
+
+    int updateByPrimaryKey(Permission record);
 }

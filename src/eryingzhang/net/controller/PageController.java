@@ -15,14 +15,14 @@ public class PageController {
 		return "index";
 	}
 
-	@RequiresPermissions("deleteFeature")
+//	@RequiresPermissions("deleteFeature")
 	@RequestMapping("deleteFeature")
 	public String deleteFeature() {
 		return "deleteFeature";
 	}
 
-	@RequiresRoles("admin")
-	@RequiresPermissions("deleteCode")
+//	@RequiresRoles("admin")
+//	@RequiresPermissions("deleteCode")
 	@RequestMapping("deleteCode")
 	public String deleteCode() {
 		return "deleteCode";

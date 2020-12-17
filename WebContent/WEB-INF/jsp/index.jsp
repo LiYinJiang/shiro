@@ -29,7 +29,7 @@
 			</c:if>
 
 			<a href="listCode">查看代码</a><span class="desc">(登录后才可以查看) </span><br>
-			<a href="deleteCode">删除代码</a><span class="desc">(要有产品管理员角色,
+			<a href="deleteCode">删除代码</a><span class="desc">(要有删除代码的权限,
 				Gaki没有，Tinker 有) </span><br> <a href="deleteFeature">删除功能</a><span
 				class="desc">(要有删除功能的权限, Gaki有，Tinker没有) </span><br>
 		</div>

@@ -118,7 +118,7 @@ public class DAO {
 			preparedStatement.setString(1, name);
 			ResultSet rs = preparedStatement.executeQuery();
 			if (rs.next()) {
-				user.setId(rs.getInt("id"));
+				user.setId((long) rs.getInt("id"));
 				user.setName(rs.getString("name"));
 				user.setPassword(rs.getString("password"));
 				user.setSalt(rs.getString("salt"));
